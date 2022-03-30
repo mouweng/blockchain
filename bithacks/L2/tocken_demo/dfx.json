@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.9.2",
+  "canisters": {
+    "tocken": {
+      "type": "motoko",
+      "main": "src/tocken/main.mo"
+    },
+    "tocken_assets": {
+      "type": "assets",
+      "source": [
+        "src/tocken_assets/assets"
+      ],
+      "dependencies": [
+        "tocken"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}

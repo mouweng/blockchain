@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.9.2",
+  "canisters": {
+    "vote": {
+      "type": "motoko",
+      "main": "src/vote/main.mo"
+    },
+    "vote_assets": {
+      "type": "assets",
+      "source": [
+        "src/vote_assets/assets"
+      ],
+      "dependencies": [
+        "vote"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}

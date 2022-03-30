@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.9.2",
+  "canisters": {
+    "cnvote": {
+      "type": "motoko",
+      "main": "src/cnvote/main.mo"
+    },
+    "cnvote_assets": {
+      "type": "assets",
+      "source": [
+        "src/cnvote_assets/assets"
+      ],
+      "dependencies": [
+        "cnvote"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
